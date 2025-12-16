@@ -1,0 +1,248 @@
+/* --- 1. Global & Typography Reset --- */
+
+/* Import a simple, clean font for the professional look */
+body {
+    font-family: 'Roboto', sans-serif;
+    margin: 0;
+    padding: 0;
+    background-color: LIGHT GRAY; /* Light gray background to match the images */
+    color: #333;
+}
+
+.container {
+    max-width: 1000px; /* Standard width for a professional document */
+    margin: 0 auto;
+    padding: 60px 40px;
+}
+
+h1 {
+    font-size: 3em;
+    font-weight: 700;
+    margin-bottom: 50px;
+    color: #000;
+}
+
+h2 {
+    font-size: 1.5em;
+    /* MODIFICATION 1: Slightly darker color for section headers */
+    font-weight: 700;
+    color: #333; 
+    margin-top: 0;
+    margin-bottom: 0;
+}
+
+h3 {
+    font-size: 1.1em;
+    /* MODIFICATION 2: Increased font weight for bolder job titles/degrees */
+    font-weight: 900; 
+    margin-top: 0;
+    margin-bottom: 5px;
+}
+
+p {
+    font-size: 0.9em;
+    font-weight: 400;
+    /* MODIFICATION 3: Tighter line height for compact paragraphs */
+    line-height: 1.4; 
+    color: #555;
+}
+
+
+/* --- 2. Layout for Section Titles (Work Experience, Education, Skills) --- */
+
+.section-title-wrapper {
+    display: grid;
+    grid-template-columns: 200px 1fr; 
+    gap: 40px; 
+    margin-bottom: 30px;
+}
+
+.section-spacer {
+    height: 60px; 
+}
+
+
+/* --- 3. Layout for Individual Entries (Work, Education, Skills) --- */
+
+.work-entry {
+    display: grid;
+    grid-template-columns: 200px 1fr;
+    gap: 40px;
+    padding-bottom: 30px; 
+    margin-bottom: 30px; 
+    border-bottom: 1px solid #eee; 
+}
+
+.work-entry:last-child {
+    border-bottom: none;
+    margin-bottom: 0;
+    padding-bottom: 0;
+}
+
+.work-date {
+    font-size: 0.9em;
+    font-weight: 400;
+    color: #555; 
+}
+
+/* Styling for the Skills bullet points */
+.work-details ul {
+    list-style: disc; 
+    padding-left: 20px; 
+    margin: 0;
+}
+
+.work-details ul li {
+    font-size: 0.9em;
+    font-weight: 400;
+    /* MODIFICATION 3: Tighter line height for list items */
+    line-height: 1.4;
+    color: #555;
+    margin-bottom: 8px; 
+}
+
+
+/* --- 4. Footer Styles --- */
+
+.contact-footer {
+    border-top: 1px solid #eee; 
+    padding: 30px 40px;
+    background-color: #f0f0f0; 
+    margin-top: 60px; 
+}
+
+.footer-inner-container {
+    max-width: 1000px;
+    margin: 0 auto;
+    display: flex; 
+    justify-content: space-between; 
+    align-items: flex-start; 
+    flex-wrap: wrap; 
+}
+
+.footer-column {
+    flex: 1; 
+    min-width: 180px; 
+    margin-right: 20px;
+    margin-bottom: 20px; 
+}
+
+.footer-title {
+    font-size: 1em;
+    font-weight: 700;
+    color: #333;
+    margin-bottom: 5px;
+}
+
+.footer-content, .footer-content a {
+    font-size: 0.9em;
+    font-weight: 400;
+    color: #555;
+    text-decoration: none; 
+}
+.footer-content a{
+     text-decoration: underline;
+}
+.copyright-info {
+    text-align: right; 
+    min-width: 250px;
+    flex-grow: 0; 
+}
+
+.social-links .icon {
+    font-size: 1.2em;
+    font-weight: 700;
+    display: inline-block;
+    width: 20px;
+    height: 20px;
+    text-align: center;
+    line-height: 20px;
+    margin-right: 10px;
+}
+
+
+/* --- 5. Responsive Adjustments (Mobile View) --- */
+
+@media (max-width: 768px) {
+    .container {
+        padding: 40px 20px;
+    }
+
+    h1 {
+        font-size: 2.5em;
+        margin-bottom: 30px;
+    }
+
+    .section-title-wrapper,
+    .work-entry {
+        grid-template-columns: 1fr; 
+        gap: 10px;
+    }
+
+    .work-date {
+        order: -1; 
+        margin-bottom: 5px;
+    }
+
+    .work-entry {
+        padding-top: 20px;
+    }
+
+    .contact-footer {
+        padding: 20px;
+    }
+
+    .footer-inner-container {
+        flex-direction: column; 
+        align-items: flex-start;
+    }
+    
+    .footer-column {
+        min-width: 100%;
+        margin-right: 0;
+        margin-bottom: 15px;
+    }
+
+    .copyright-info {
+        text-align: left; 
+        margin-top: 10px;
+    }
+}
+.header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    /* FIX: Ensure padding is consistent with the rest of the layout */
+    padding: 30px 100px; 
+}
+
+.logo {
+    font-size: 1.2em;
+    font-weight: bold;
+    display: flex;
+    align-items: center;
+}
+
+.logo-dot {
+    display: inline-block;
+    width: 12px;
+    height: 12px;
+    background-color: #ffaa00; /* Orange color */
+    border-radius: 50%;
+    margin-right: 8px;
+}
+
+.editor-text {
+    font-weight: normal;
+    color: #888;
+    margin-left: 5px;
+}
+
+.nav a {
+    text-decoration: none;
+    color: #333;
+    margin-left: 30px;
+    padding-bottom: 3px; 
+}
+/* Update the existing .section-spacer rule in styles.css */
+

@@ -1,0 +1,197 @@
+/* --- Basic Reset and Typography --- */
+body {
+    font-family: Arial, sans-serif;
+    margin: 0;
+    padding: 10px;
+    background-color: #f0f0f0;
+}
+header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    /* FIX: Ensure padding is consistent with the rest of the layout */
+    padding: 30px 100px; 
+}
+
+.logo {
+    font-size: 1.2em;
+    font-weight: bold;
+    display: flex;
+    align-items: center;
+}
+
+.logo-dot {
+    display: inline-block;
+    width: 12px;
+    height: 12px;
+    background-color: #ffaa00; /* Orange color */
+    border-radius: 50%;
+    margin-right: 8px;
+}
+
+.editor-text {
+    font-weight: normal;
+    color: #888;
+    margin-left: 5px;
+}
+
+.nav a {
+    text-decoration: none;
+    color: #333;
+    margin-left: 30px;
+    padding-bottom: 3px; 
+}
+.container {
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 0 15px;
+}
+
+h2 {
+    font-size: 1.8em;
+    font-weight: bold;
+    color: #333;
+    margin-top: 0;
+    margin-bottom: 0.5em;
+}
+
+p {
+    font-size: 1em;
+    line-height: 1.6;
+    color: #555;
+}
+
+hr {
+    border: none;
+    height: 1px;
+    background-color: #ddd;
+    margin: 40px 0;
+}
+
+
+/* --- Project Layout (Flexbox) --- */
+
+.project-item {
+    display: flex; /* Enables Flexbox layout */
+    align-items: flex-start; /* Aligns items to the top */
+    gap: 50px; /* Space between the text and the image */
+    padding: 20px 0;
+}
+
+.project-text {
+    /* Takes up more space on the left/right */
+    flex: 3; /* e.g., takes up 3/5 of the available space */
+}
+
+.project-image {
+    /* Takes up less space on the left/right */
+    flex: 2; /* e.g., takes up 2/5 of the available space */
+}
+
+.project-image img {
+    /* Make the image fill its container */
+    width: 100%;
+    height: 10%;
+    display: block; /* Removes any extra space below the image */
+}
+
+/* Rule for alternating layout */
+.project-item.reverse {
+    flex-direction: row-reverse;
+}
+
+
+/* --- Responsive Design (Mobile-First Approach) --- */
+
+@media (max-width: 768px) {
+    .project-item {
+        /* Stack the text and image vertically on smaller screens */
+        flex-direction: column;
+    }
+    
+    /* Ensure the reverse order is also reset on mobile for consistency */
+    .project-item.reverse {
+        flex-direction: column;
+    }
+
+    .project-text,
+    .project-image {
+        /* Ensure both take full width when stacked */
+        flex: none;
+        width: 100%;
+    }
+
+}
+.footer {
+    background-color: #f0f0f0; /* Light gray background to match the screenshot */
+    padding: 30px 100px;
+    margin-top: 50px; /* Space above the footer */
+}
+
+/* The thin horizontal line at the top of the footer */
+.footer-line {
+    border-top: 1px solid #ddd; /* Light gray line */
+    margin: 0 auto 30px auto;
+    width: 100%;
+}
+
+.footer-content {
+    display: flex;
+    justify-content: space-between; /* Distribute columns evenly */
+    align-items: flex-start;
+    max-width: 1200px;
+    margin: 0 auto;
+}
+
+.footer-group,
+.footer-copyright {
+    /* Ensures equal spacing if we use flex-basis, but space-between is enough here */
+    padding: 0 10px; 
+}
+
+.footer-title {
+    font-size: 1em;
+    font-weight: bold;
+    color: #333;
+    margin-bottom: 5px;
+}
+
+.footer-group p {
+    font-size: 0.9em;
+    margin: 0;
+    color: #555;
+}
+/* --- Social Icons Styling --- */
+.social-links {
+    display: flex; /* Arranges the icons horizontally */
+    gap: 15px;    /* Space between icons */
+}
+
+.social-links a {
+
+    color:rgb(14, 14, 14); /* Sets the icon color to black */
+    font-size: 1.5em; /* Makes the icons larger than regular text */
+    text-decoration: none; /* Removes any default link underline */
+}
+
+/* Copyright Section Styling */
+.footer-copyright {
+    text-align: right;
+    font-size: 0.85em;
+    color: #555;
+}
+
+.footer-copyright p {
+    margin: 0;
+    line-height: 1.5;
+}
+
+.wix-link {
+    color: #555;
+    text-decoration: none;
+    border-bottom: 1px solid #555; /* Dotted line under Wix */
+}
+
+.wix-link:hover {
+    color: #333;
+}
