@@ -1,0 +1,160 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: Arial, sans-serif;
+}
+
+body {
+    background: #e6e6e6;
+}
+
+/* HEADER */
+header {
+    display: flex;
+    justify-content: space-between;
+    padding: 20px 40px;
+}
+
+header .logo {
+    font-size: 18px;
+    font-weight: bold;
+}
+
+header nav a {
+    margin-left: 20px;
+    text-decoration: none;
+    color: black;
+    font-size: 16px;
+}
+
+/* MAIN SECTION */
+.hero {
+    display: flex;
+    align-items: center;
+    padding: 50px 80px;
+}
+
+.profile-img {
+    width: 280px;
+    height: 280px;
+    border-radius: 50%;
+    margin-right: 40px;
+}
+
+.intro h1 {
+    font-size: 60px;
+}
+
+.intro h2 {
+    font-size: 28px;
+    margin: 10px 0;
+    font-weight: normal;
+}
+
+.intro p {
+    width: 420px;
+    color: #444;
+    line-height: 1.5;
+}
+
+.buttons {
+    margin-top: 20px;
+}
+
+.btn {
+    width: 150px;
+    height: 150px;
+    border-radius: 50px;
+    padding: 15px 22px;
+    border-radius: 50%;
+    margin-right: 10px;
+    text-decoration: none;
+    color: black;
+    font-weight: bold;
+    
+}
+.btn hover{
+ background-color: white;
+}
+.yellow { background: #f5c518; }
+.red    { background: #e63946; color:black; }
+.blue   { background: #00b4d8; }
+
+/* FOOTER */
+.footer {
+    background: #e6e6e6; /* Light gray background to match the screenshot */
+    padding: 30px 100px;
+    margin-top: 50px; /* Space above the footer */
+}
+
+/* The thin horizontal line at the top of the footer */
+.footer-line {
+    border-top: 1px solid #ddd; /* Light gray line */
+    margin: 0 auto 30px auto;
+    width: 100%;
+}
+
+.footer-content {
+    display: flex;
+    justify-content: space-between; /* Distribute columns evenly */
+    align-items: flex-start;
+    max-width: 1200px;
+    margin: 0 auto;
+}
+
+.footer-group,
+.footer-copyright {
+    /* Ensures equal spacing if we use flex-basis, but space-between is enough here */
+    padding: 0 10px; 
+}
+
+.footer-title {
+    font-size: 1em;
+    font-weight: bold;
+    color: #333;
+    margin-bottom: 5px;
+}
+
+.footer-group p {
+    font-size: 0.9em;
+    margin: 0;
+    color: #555;
+}
+
+/* Social Icons Styling */
+.social-icons {
+    display: flex;
+    gap: 15px;
+    margin-top: 5px;
+    font-size: 1.2em; /* Size of the social icons */
+}
+
+/* Basic styling for the social icon placeholders */
+.icon {
+    font-weight: bold;
+    cursor: pointer;
+    color: #333;
+}
+
+/* Copyright Section Styling */
+.footer-copyright {
+    text-align: right;
+    font-size: 0.85em;
+    color: #555;
+}
+
+.footer-copyright p {
+    margin: 0;
+    line-height: 1.5;
+}
+
+.wix-link {
+    color: #555;
+    text-decoration: none;
+    border-bottom: 1px solid #555; /* Dotted line under Wix */
+}
+
+.wix-link:hover {
+    color: #333;
+}
